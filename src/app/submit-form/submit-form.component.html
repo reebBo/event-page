@@ -1,0 +1,103 @@
+<div class="content py-sm-0 py-md-3 py-lg-5">
+    <h1 class="text-center py-5">
+        Fill up the form <br> and join the team
+    </h1>
+    <div class="container">
+        <div [hidden]="submitted">
+            <form (ngSubmit)="onSubmit()" #memberForm="ngForm">
+
+                <!-- First name -->
+                <div class="form-group py-2">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" required [(ngModel)]="model.firstName" name="firstName" #firstName="ngModel">
+                    <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+                        First Name is required
+                    </div>
+                </div>
+
+                <!-- Last name  -->
+                <div class="form-group py-2">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" required [(ngModel)]="model.lastName" name="lastName" #lastName="ngModel">
+                    <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+                        Last Name is required
+                    </div>
+                </div>
+
+                <!-- gender  -->
+                <div class="form-group py-2 border-bottom">
+                    <label for="gender" class="w-100">
+                        Gender 
+                    </label>
+                    <div id="gender" class="form-check form-check-inline" *ngFor="let g of gender">
+                        <div class="gender">
+                            <input type="radio" name="gender" id="gender-{{ g.value }}" [(ngModel)]="model.gender" [value]="g.value" /> &nbsp;
+                            <label class="mr-sm-2 mr-md-4 mr-lg-4" for="gender-{{ g.value }}">{{ g.value }}
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group py-2 border-bottom">
+                    <label for="skills" class="w-100">
+                        Skills 
+                    </label>
+                    <div class="skills form-check" id="skills">
+                        <div class="checkbox-items row">
+                            <div *ngFor="let item of defaultListOfSkills">
+                                <input type="checkbox" name="{{item.label}}" id="" [(ngModel)]="item.isChecked" (change)="changeSelection()">{{item.label}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group py-2">
+                    <label for="comment">
+                        Message 
+                    </label>
+                    <div id="comment">
+                        <textarea class="w-100" name="textarea" rows="5" [(ngModel)]="model.comment" required></textarea>
+                    </div>
+                </div>
+
+                <div class="float-right">
+                    <button type="submit" class="btn btn-info px-5" [disabled]="!memberForm.form.valid">Join now!</button>
+                </div>
+            </form>
+        </div>
+
+        <div [hidden]="!submitted">
+            <h2>You submitted the following:</h2>
+            <div class="row">
+                <div class="col-xs-3">First Name</div>
+                <div class="col-xs-9">{{ model.firstName }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3">Last Name</div>
+                <div class="col-xs-9">{{ model.lastName }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3">Gender</div>
+                <div class="col-xs-9">{{ model.gender }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3">Skills</div>
+                <div class="col-xs-9">
+                    <ul>
+                        <li *ngFor="let item of selectedSkills">{{item.label}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3">Message</div>
+                <div class="col-xs-9">{{ model.comment }}</div>
+            </div>
+        </div>
+    </div>
+</div>

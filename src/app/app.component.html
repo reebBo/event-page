@@ -1,0 +1,68 @@
+<div id="wrapper" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- navigation  -->
+    <nav class="navbar navbar-expand-lg fixed-top px-4">
+        <a class="navbar-brand pl-2" routerLink="home">Winter Wonderland</a>
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarSupportedContent" data-toggle="dropdown" aria-controls="navbarSupp
+    ortedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+    </button>
+        <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item text-light">
+                    <a class="nav-link btn btn-sm btn-info" href="#submit-form">VOLUNTEER WITH US!</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="open(thingsToDoModal)">Things to do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact us</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+
+    <!-- application form  -->
+    <div class="content container-fluid py-5">
+        <app-home></app-home>
+        <!-- submit form  -->
+        <section id="submit-form">
+            <app-submit-form></app-submit-form>
+        </section>
+
+        <!-- contact form  -->
+        <section id="contact">
+            <app-contact></app-contact>
+        </section>
+
+        <router-outlet></router-outlet>
+    </div>
+    <footer class="m-0 py-3">
+        <p class="text-center">Copyright © 2020
+            <a href="https://eklegoshape.dk/" target="_blank">EklegoShape</a> </p>
+    </footer>
+</div>
+
+
+
+
+<!-- modal  -->
+<ng-template #thingsToDoModal let-modal>
+    <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <app-things-to-do></app-things-to-do>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    </div>
+</ng-template>

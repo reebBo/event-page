@@ -1,0 +1,54 @@
+$lightly:rgb(241, 202, 202);
+$app-bg: #031120;
+$call2actionColor:#cea4c5;
+#wrapper {
+    background-color: $app-bg;
+}
+
+// navigation 
+.navbar {
+    box-shadow: 0 0 15px $lightly;
+    a {
+        color: white;
+    }
+    background-color: $app-bg;
+}
+
+.navbar-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.7em;
+    text-decoration: none;
+    background: linear-gradient(135deg, #ea66af 0%, #764ba2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul.navbar-nav {
+    justify-content: center;
+}
+
+.fa-bars {
+    color: $call2actionColor;
+}
+
+// carousel 
+#scrolling-banner {
+    padding: 1em;
+}
+
+.img-carousel {
+    border: 2px solid $lightly;
+    border-radius: 1em;
+}
+
+footer {
+    box-shadow: 0 0 15px $lightly;
+    a {
+        color: white;
+    }
+}
+
+.btn-outline-dark {
+    padding-left: 2em;
+    padding-right: 2em;
+}

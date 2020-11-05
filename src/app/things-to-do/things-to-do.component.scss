@@ -1,0 +1,11 @@
+@import "../../assets/global_variables.scss";
+.content,
+.card {
+    background-color: $app-bg;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #ea66af 0%, #764ba2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

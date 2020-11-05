@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+@import "./assets/global_variables.scss";
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+a.nav-link {
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: $app-bg !important;
+}
+
+.modal-backdrop {
+    background-color: $app-bg !important;
+}
+
+.modal-header {
+    display: none;
+}

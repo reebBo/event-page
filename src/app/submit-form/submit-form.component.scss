@@ -1,0 +1,24 @@
+        @import "../../assets/global_variables.scss";
+        textarea {
+            border-radius: 6px;
+        }
+        
+        @media (min-width: 375px) {
+            .checkbox-items {
+                display: grid;
+            }
+        }
+        
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            .checkbox-items {
+                grid-template-columns: 2fr 2fr;
+            }
+        }
+        
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            .container {
+                width: 50%;
+            }
+        }

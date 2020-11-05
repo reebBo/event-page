@@ -1,0 +1,58 @@
+.fa {
+    font-size: 30px;
+    width: 50px;
+    margin: 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-linkedin {
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-instagram {
+    background: linear-gradient(135deg, #ea66af 0%, #764ba2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 375px) {
+    .content .border {
+        border: transparent !important;
+        width: 100%;
+    }
+    #contact-info {
+        text-align: left;
+    }
+    .border-right {
+        border: transparent !important;
+    }
+    #social-media {
+        padding-top: 1em;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .content .border {
+        // border: lightgray 1px solid !important;
+        width: 75%;
+    }
+    #contact-info {
+        border-right: 1px solid lightgray !important;
+        text-align: right;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}

@@ -1,0 +1,76 @@
+        @import "../../assets/global_variables.scss";
+        #scrolling-banner {
+            padding: 1em;
+            margin-top: 4em;
+        }
+        
+        .carousel-item .img {
+            padding: .12rem;
+            margin: 0em 12em;
+        }
+        
+        .carousel-item {
+            position: relative;
+            height: 35em;
+        }
+        
+        .carousel-indicators {
+            display: none;
+        }
+        
+        .carousel-caption .carousel-txt {
+            display: table-cell;
+            vertical-align: bottom;
+        }
+        
+        @media (min-width: 375px) {
+            .carousel-caption {
+                position: absolute;
+                z-index: 1;
+                display: table;
+                left: 2em;
+                bottom: 6em;
+                background: transparent;
+                border: 0px solid $call2actionColor;
+            }
+            .carousel-txt {
+                font-size: 1em;
+                background: $call2actionColor;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            .carousel-caption {
+                left: 15em;
+                bottom: 8em;
+                background: #000;
+                border: 4px solid $call2actionColor;
+                padding: 1em 2em;
+            }
+            .carousel-txt {
+                line-height: 1.6em;
+                font-size: 1.6em;
+                padding: 0em;
+                text-align: left;
+            }
+        }
+        
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            .carousel-caption {
+                line-height: 1.6em;
+                left: 39em;
+                bottom: 1em;
+            }
+            .carousel-txt {
+                font-size: 2em;
+                padding: 1.8em 0em;
+                text-align: left;
+                span {
+                    display: none;
+                }
+            }
+        }

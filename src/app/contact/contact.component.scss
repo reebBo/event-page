@@ -26,6 +26,7 @@
     -webkit-text-fill-color: transparent;
 }
 
+//small devices
 @media (min-width: 375px) {
     .content .border {
         border: transparent !important;
@@ -45,12 +46,14 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     .content .border {
-        // border: lightgray 1px solid !important;
         width: 75%;
     }
     #contact-info {
         border-right: 1px solid lightgray !important;
         text-align: right;
+    }
+    #social-media {
+        padding-top: 0em;
     }
 }
 

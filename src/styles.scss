@@ -14,14 +14,27 @@ a.nav-link {
     cursor: pointer;
 }
 
+.btn {
+    background-color: $btn-bg;
+    border-color: $btn-bg;
+}
+
 .modal-content {
     background-color: $app-bg !important;
 }
 
 .modal-backdrop {
-    background-color: $app-bg !important;
+    // background-color: $app-bg !important;
+    background: linear-gradient(135deg, #68515d 0%, #764ba2 100%);
 }
 
 .modal-header {
     display: none;
+}
+
+.modal-footer {
+    border-top: transparent;
+    button {
+        padding: 0.5em 3em !important;
+    }
 }
